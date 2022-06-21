@@ -1,0 +1,16 @@
+echo Enter the string and print it in the reverse order 
+read str
+len='echo $str | wc -c'
+echo $len
+len= 'expr $len - 1'
+echo length of the string $len
+echo *************************
+echo orginal string is $str
+echo length of string is: $len
+echo Reversed string is:
+while [ $len -ge 1]
+do
+  rev='echo $str | cut -c $len'
+  echo $rev
+    len='expr $len -1'
+done
